@@ -31,7 +31,7 @@ const createBoxes = (amount) => {
   }
 
   arrayOfElements.map((element) => {
-    divBoxes.appendChild(element);
+    divBoxes.append(element);
   });
 };
 
