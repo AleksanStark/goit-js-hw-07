@@ -28,6 +28,7 @@ const createBoxes = (amount) => {
     }
   }
   divBoxes.append(...arrayOfElements);
+  arrayOfElements.length = 0;
 };
 
 createButtonElement.addEventListener("click", () => {
