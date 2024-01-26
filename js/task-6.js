@@ -35,8 +35,7 @@ const createBoxes = (amount) => {
   });
 };
 
-createButton.addEventListener("click", (event) => {
-  event.preventDefault();
+createButton.addEventListener("click", () => {
   const inputValue = parseInt(inputNumber.value);
 
   if (inputValue >= 1 && inputValue <= 100) {
