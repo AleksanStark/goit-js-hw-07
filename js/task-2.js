@@ -32,14 +32,10 @@ listOfGallery.style.gap = "16px";
 const markup = images
   .map(
     (img) =>
-      `<li class="gallery-item"><img class="gallery-img" src=${img.url} alt=${img.alt}/><li/>`
+      `<li class="gallery-item"><img class="gallery-img" src=${img.url} alt=${img.alt} width="550" height="550"/></li>`
   )
   .join("");
 
 listOfGallery.insertAdjacentHTML("beforeend", markup);
 
 const image = document.querySelectorAll(".gallery-img");
-image.forEach((element) => {
-  element.setAttribute("width", 500);
-  element.setAttribute("height", 500);
-});
