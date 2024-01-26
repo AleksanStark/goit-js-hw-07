@@ -41,6 +41,8 @@ createButtonElement.addEventListener("click", () => {
   }
 });
 
-const destroyBoxes = () => (divBoxes.innerHTML = "");
+const destroyBoxes = () => (
+  (divBoxes.innerHTML = ""), (inputElement.value = "")
+);
 
 destroyButtonElement.addEventListener("click", destroyBoxes);
