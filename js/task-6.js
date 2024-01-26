@@ -29,6 +29,7 @@ const createBoxes = (amount) => {
   }
   divBoxes.append(...arrayOfElements);
   arrayOfElements.length = 0;
+  console.log(arrayOfElements);
 };
 
 createButtonElement.addEventListener("click", () => {
@@ -36,7 +37,7 @@ createButtonElement.addEventListener("click", () => {
 
   if (inputElementValue >= 1 && inputElementValue <= 100) {
     createBoxes(inputElementValue);
-    inputElementValue = "";
+    inputElement.value = "";
   }
 });
 
