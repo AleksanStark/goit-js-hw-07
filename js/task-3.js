@@ -8,6 +8,5 @@ textInput.addEventListener("input", (event) => {
     output.textContent = "Anonymous";
   } else {
     output.textContent = textInputValue;
-    console.log(textInputValue);
   }
 });

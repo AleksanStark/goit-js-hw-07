@@ -17,25 +17,25 @@ const arrayOfElements = [];
 const createBoxes = (amount) => {
   for (let i = 0; i < amount; i++) {
     const box = document.createElement("div");
-    box.style.backgroundColor = `${getRandomHexColor()}`;
+    box.style.backgroundColor = getRandomHexColor();
     if (i === 0) {
       box.style.width = "30px";
       box.style.height = "30px";
     } else {
       box.style.width = `${30 + i * 10}px`;
       box.style.height = `${30 + i * 10}px`;
-      arrayOfElements.push(box);
     }
+    arrayOfElements.push(box);
   }
   divBoxes.append(...arrayOfElements);
   arrayOfElements.length = 0;
-  console.log(arrayOfElements);
 };
 
 createButtonElement.addEventListener("click", () => {
   const inputElementValue = parseInt(inputElement.value);
 
   if (inputElementValue >= 1 && inputElementValue <= 100) {
+    destroyBoxes();
     createBoxes(inputElementValue);
     inputElement.value = "";
   }

@@ -37,5 +37,3 @@ const markup = images
   .join("");
 
 listOfGallery.insertAdjacentHTML("beforeend", markup);
-
-const image = document.querySelectorAll(".gallery-img");
